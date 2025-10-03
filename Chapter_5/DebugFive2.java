@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class DebugFive2 {
+    public static void main(String args[]) {
+        int num;
+        int num2;
+
+        Scanner input = new Scanner(System.in);
+
+        // Fixed: added () to call nextInt method
+        System.out.print("Enter a number: ");
+        num = input.nextInt();
+
+        System.out.print("Enter another number: ");
+        num2 = input.nextInt();
+
+        // Fixed: use modulus for both directions and OR (||)
+        if(num % num2 == 0 || num2 % num == 0) {
+            System.out.println("One of these numbers is evenly divisible into the other");
+        } else {
+            System.out.println("Neither of these numbers is evenly divisible into the other");
+        }
+    }
+}
